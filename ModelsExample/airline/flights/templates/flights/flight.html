@@ -7,4 +7,13 @@
         <li>Destination: {{ flight.destination }}</li>
         <li>Duration: {{ flight.duration }} minutes</li>
     </ul>
+    <h2>Passengers;</h2>
+    <ul>
+        {% for passenger in Passengers %}
+            <li>{{ passenger }}</li>
+        {% empty %}
+            <li>No Passengers.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}" style="text-decoration: none">View All Flights</a>
 {% endblock %}
